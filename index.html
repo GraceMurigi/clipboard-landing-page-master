@@ -8,57 +8,67 @@
   
   <title>Frontend Mentor | Clipboard landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,600&display=swap" rel="stylesheet">
+
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+
+
+  
 </head>
 <body>
   <main>
     <!-- intro section -->
-    <section class="intro">
+    <section class="container intro">
       <div class="logo">
         <img src="./images/logo.svg" alt="company logo">
       </div>
-      <div>
+      <div class="intro-text">
         <h1>A history of everything you copy</h1>
         <p>Clipboard allows you to track and organize everything you 
-          copy. Instantly access your clipboard on all your devices.</p>
-        <button>Download for iOS</button>
-        <button>Download for Mac</button>
+          copy. Instantly access your clipboard on all your devices.</p>  
+      </div>
+      <div class="intro-buttons">
+        <div><button class="cyan-button">Download for iOS</button></div>  
+        <div><button class="blue-button">Download for Mac</button></div>
       </div>
     </section>
+     
 
     <!-- first feature -->
-    <section>
-      <div>
+    <section class="container feature-one">
+      <div class="center">
         <h2>Keep track of your snippets</h2>
         <p>Clipboard instantly stores any item you copy in the cloud, 
           meaning you can access your snippets immediately on all your 
           devices. Our Mac and iOS apps will help you organize everything.</p>
       </div>
-      <div>
-        <img src="./images/image-computer.png" alt="a computer">
+      
+      <div class="feature-one-grid">
+        <div class="feature-one-image ">
+          <img src="./images/image-computer.png" alt="a computer">
+        </div>
+        <div class="feature-one-text ">
+          <div>
+            <h3>Quick Search</h3>
+            <p> Easily search your snippets by content, category, web address, application, and more.</p>
+          </div>
+          <div>
+            <h3>iCloud Sync</h3>
+            <p>Instantly saves and syncs snippets across all your devices.</p>
+          </div>
+          <div>
+            <h3>Complete History</h3>
+            <p>Retrieve any snippets from the first moment you started using the app.</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <div>
-          <h3>Quick Search</h3>
-          <p> Easily search your snippets by content, category, web address, application, and more.</p>
-        </div>
-        <div>
-          <h3>iCloud Sync</h3>
-          <p>Instantly saves and syncs snippets across all your devices.</p>
-        </div>
-        <div>
-          <h3>Complete History</h3>
-          <p>Retrieve any snippets from the first moment you started using the app.</p>
-        </div>
-      </div>
+      
     </section>
 
     <!-- second feature -->
-    <section>
+    <section class="container center mb-100">
       <div>
         <h2>Access Clipboard anywhere</h2>
         <p>Whether you’re on the go, or at your computer, you can access all your Clipboard 
@@ -70,32 +80,41 @@
     </section>
 
     <!-- third feature -->
-    <section>
-      <div>
+    <section class="container center">
+      <div class="  mb-50">
         <h2>Supercharge your workflow</h2>
         <p>We’ve got the tools to boost your productivity.</p>
       </div>
-      <div>
-        <div>
-          <img src="./images/icon-blacklist.svg" alt="blaclist icon">
-          <h3>Create blacklists</h3>
-          <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+      <div class="feature-three">
+        <div class="grid-wrapper-2">
+          <div class="center">
+            <img src="./images/icon-blacklist.svg" alt="blaclist icon">
+            <h3>Create blacklists</h3>
+            <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+          </div>
+          <div class="center">
+            <img src="./images/icon-text.svg" alt=" text icon">
+            <h3>Plain text snippets</h3>
+            <p>Remove unwanted formatting from copied text for a consistent look.</p>
+          </div>
+          <div class="center">
+            <img src="./images/icon-preview.svg" alt="preview icon">
+            <h3>Sneak preview</h3>
+            <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+          </div>
         </div>
-        <div>
-          <img src="./images/icon-text.svg" alt=" text icon">
-          <h3>Plain text snippets</h3>
-          <p>Remove unwanted formatting from copied text for a consistent look.</p>
-        </div>
-        <div>
-          <img src="./images/icon-preview.svg" alt="preview icon">
-          <h3>Sneak preview</h3>
-          <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+        <div class="grid-wrapper-2">
+          <div><img src="./images/logo-google.png" alt="google logo"></div>
+          <div><img src="./images/logo-ibm.png" alt="IBM logo"></div>
+          <div><img src="./images/logo-microsoft.png" alt="microsoft logo"></div>
+          <div><img src="./images/logo-hp.png" alt="hp logo"></div>
+          <div><img src="./images/logo-vector-graphics.png" alt="vector graphics"></div>  
         </div>
       </div>
     </section>
 
     <!-- partners section -->
-    <section>
+    <!-- <section class="container flex-wrapper">
       
         <img src="./images/logo-google.png" alt="google logo">
         <img src="./images/logo-ibm.png" alt="IBM logo">
@@ -103,32 +122,57 @@
         <img src="./images/logo-hp.png" alt="hp logo">
         <img src="./images/logo-vector-graphics.png" alt="vector graphics">
       
-    </section>
+    </section> -->
 
     <!-- call to action -->
-    <section>
-      <h2>Clipboard for iOS and Mac OS</h2>
-      <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+    <section class="container ">
+      <div class="action-text">
+        <h2>Clipboard for iOS and Mac OS</h2>
+        <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
         and you’re ready to start adding to your clipboard.</p>
-      <button>Download for iOS</button>
-      <button>Download for Mac</button>
+      </div>
+      
+      <div class="intro-buttons">
+        <div><button class="cyan-button">Download for iOS</button></div>  
+        <div><button class="blue-button">Download for Mac</button></div>
+      </div>
     </section>
   </main>
-  <footer>
-    <img src="./images/logo.svg" alt="company logo">
-    <nav>
-      <ul>
+  <footer class="container grid-wrapper">
+    <div><img src="./images/logo.svg" alt="company logo"></div>
+<!--     
+    <nav class="">
+      <ul class="links-grid">
         <li><a href="#">FAQs</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Press Kit</a></li>
         <li><a href="#">Install Guide</a></li>
       </ul>
+    </nav> -->
+    <nav class="links-grid ">
+      <ul class="col-1">
+        <li class="mb-10"><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul class="col-2">
+        <li class="mb-10"><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+      <ul class="col-3">
+        <li><a href="#">Install Guide</a></li>
+        <li><a href=""></a></li>
+      </ul>
     </nav>
-    <p class="attribution">
+    <div class="flex-wrapper">
+      <li><a href="">f</a></li>
+      <li><a href="">t</a></li>
+      <li><a href="">i</a></li>
+    </div>
+    <!-- <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/GraceMurigi" target="_blank">Grace</a>.
-    </p>
+    </p> -->
   </footer>
 </body>
 </html>

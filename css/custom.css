@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+    color: hsl(210, 10%, 33%);
+}
+
+/* responsive images  */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* lists & links */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ a {
+     color: inherit;
+     text-decoration: none;
+ }
+ 
+ a:link {
+     color: inherit;
+ }
+
+ a:visited {
+     color: inherit;
+ }
+
+ a:hover {
+     color: hsl(171, 66%, 44%);
+ }
+
+
+/* sizing & alignment*/
+.container {
+    max-width: 1440px;    
+}
+.center {
+    text-align: center;
+}
+
+.mb-10 {
+    margin-bottom: 10vh;
+}
+
+.p-10 {
+    padding: 16px;
+}
+
+
+/* buttons */
+.buttons-layout{
+    grid-area: buttons;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+button {
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.blue-button {
+    background: hsl(233, 100%, 69%);
+}
+
+.cyan-button {
+    background: hsl(171, 66%, 44%);
+    
+}
+
+
+/* intro section */
+.intro {
+    background-image: url("../images/bg-header-mobile.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+}
+
+.text-area {
+    margin: auto;
+    width: 71%;
+    text-align: center;
+    
+}
+
+
+/* section two */
+.section-2-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: "image"
+                         "text-area";
+}
+
+.section-2-subgrid {
+    grid-area: text-area;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 6vw; 
+
+}
+
+.feature-one-image {
+    padding: 0 20px;
+    grid-area: image;
+}
+
+
+/* section four */
+.section-4-grid {
+    display: grid;
+    grid-template-areas:
+        "one"
+        "two"
+        "three";
+    padding: 2vh 5vw;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+
+
+/* section five  */
+.section-5-grid {
+    display: grid;
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    padding: 2vh 5vw;
+    grid-row-gap: 5vh;
+    justify-items: center;
+}
+
+
+/* footer */
+footer {
+    background-color:hsl(201, 11%, 66%);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+        "logo"
+        "links"
+        "socials";
+    justify-items: center;
+    grid-row-gap: 2vh;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+}
+
+.links-grid {
+    line-height: 2rem;
+    text-align: center;
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1vw;
+    grid-template-rows: 1fr;
+}
+
+
+/* Desktop sepcific styles for >1024px  screen sizes  */
+
+@media screen and (min-width: 1024px) {
+
+    /* intro section */
+    .intro {
+        background-image: url("../images/bg-header-desktop.png");
+    }
+
+    .text-area {
+        width: 45%;
+    }
+
+
+    /* section two */
+    .section-2-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr;
+        grid-template-areas: "image text-area";
+    }
+    
+    .section-2-subgrid {
+        padding: 0 10vw 0 5vw;
+        text-align: left;
+    }
+    .feature-one-image {
+        margin-left: -50px;
+    }
+
+    .section-4-grid {
+        display: grid;
+        grid-template-areas:
+            "one two three";
+       
+    }
+
+
+    /* section five  */
+    .section-5-grid {
+        display: grid;
+        grid-template-areas:
+            "one two three four five";
+    }
+
+
+    /* footer */
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "logo links socials";
+        justify-items: center;        
+    }
+
+    .links-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "col1 col2 col3";
+        text-align: left;
+        grid-column-gap: 4vw;
+    }
+
+    .col-1 {
+        grid-area: col1;
+    }
+    
+    .col-2 {
+        grid-area: col2;
+    }
+
+    .col-3 {
+        grid-area: col3;
+    }
+}
